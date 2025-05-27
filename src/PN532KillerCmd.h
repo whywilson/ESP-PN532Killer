@@ -2,6 +2,7 @@
 #define PN532_KILLER_COMMAND_H
 
 #include "PN532Cmd.h"
+#include <cstdint>
 
 namespace PN532KillerCmd {
 using namespace PN532Cmd;
