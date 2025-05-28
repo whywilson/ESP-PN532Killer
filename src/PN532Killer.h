@@ -20,6 +20,7 @@ public:
 
     bool switchReaderMode();
     bool switchEmulatorMifareSlot(uint8_t slot);
+    bool switchEmulatorNtagSlot(uint8_t slot);
     bool switchEmulatorIso15693Slot(uint8_t slot);
     bool switchEmulatorEm4100Slot(uint8_t slot);
     bool setMfkey32v2Sniffing();

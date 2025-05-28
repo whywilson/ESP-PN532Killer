@@ -21,7 +21,11 @@ bool PN532Killer::switchReaderMode() {
 }
 
 bool PN532Killer::switchEmulatorMifareSlot(uint8_t slot) {
-    return setWorkMode(PN532KillerCmd::WorkMode::Emulator, 0x01, slot);
+    return setWorkMode(PN532KillerCmd::WorkMode::Emulator, PN532KillerCmd::TagType::MFC1K, slot);
+}
+
+bool PN532Killer::switchEmulatorNtagSlot(uint8_t slot) {
+    return setWorkMode(PN532KillerCmd::WorkMode::Emulator, PN532KillerCmd::TagType::NTAG, slot);
 }
 
 bool PN532Killer::switchEmulatorIso15693Slot(uint8_t slot) {
