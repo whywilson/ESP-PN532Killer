@@ -18,6 +18,7 @@ public:
     explicit PN532Killer(HardwareSerial &serial);
     ~PN532Killer();
 
+    bool isPn532killer();
     bool switchReaderMode();
     bool switchEmulatorMifareSlot(uint8_t slot);
     bool switchEmulatorNtagSlot(uint8_t slot);

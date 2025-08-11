@@ -16,6 +16,11 @@ bool PN532Killer::setWorkMode(uint8_t mode, uint8_t type, uint8_t index) {
     return response.size() > 6;
 }
 
+bool PN532Killer::isPn532killer() {
+    std::vector<uint8_t> response = writeCommand(PN532KillerCmd::CheckPn532Killer, {});
+    return response.size() > 6;
+}
+
 bool PN532Killer::switchReaderMode() {
     return setWorkMode(PN532KillerCmd::WorkMode::Reader, PN532KillerCmd::TagType::MFC1K, 0x00);
 }
