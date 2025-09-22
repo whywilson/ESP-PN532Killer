@@ -18,7 +18,7 @@ bool PN532Killer::setWorkMode(uint8_t mode, uint8_t type, uint8_t index) {
 
 bool PN532Killer::isPn532killer() {
     std::vector<uint8_t> response = writeCommand(PN532KillerCmd::CheckPn532Killer, {});
-    return response.size() > 0;
+    return response.size() > 2;
 }
 
 bool PN532Killer::switchReaderMode() {
